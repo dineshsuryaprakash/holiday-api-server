@@ -17,7 +17,7 @@ func main() {
 	//create Api server
 	HolidayRestApiServer, err := api.NewServer(config.ListenAddress, config.BankHolidayJsonEndpointURL)
 	if err != nil {
-		klog.Fatalf("Error creating RestApiServer: %v", err)
+		klog.Fatalf("Error creating HolidayRestApiServer: %v", err)
 		return
 	}
 
@@ -32,7 +32,7 @@ func main() {
 
 	err = HolidayRestApiServer.Shutdown()
 	if err != nil {
-		klog.Fatalf("Error shutting down RestApiServer: %v", err)
+		klog.Fatalf("Error shutting down HolidayRestApiServer: %v", err)
 		return
 	}
 

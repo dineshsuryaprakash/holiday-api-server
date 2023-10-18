@@ -25,7 +25,7 @@ func NewServer(listenAddr string, BankHolidayJsonEndpointURL string) (*Server, e
 		return nil, err
 	}
 
-	klog.Infof("Server created with JSON endpoint URL: %s", BankHolidayJsonEndpointURL)
+	klog.Infof("Server created with JSON data from URL: %s", BankHolidayJsonEndpointURL)
 
 	return &Server{
 		WebServer: &http.Server{
